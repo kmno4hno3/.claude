@@ -1,31 +1,31 @@
 ---
 allowed-tools: Read, Glob, Grep, Edit, MultiEdit, Write, Bash, TodoWrite, mcp__serena__check_onboarding_performed, mcp__serena__delete_memory, mcp__serena__find_file, mcp__serena__find_referencing_symbols, mcp__serena__find_symbol, mcp__serena__get_symbols_overview, mcp__serena__insert_after_symbol, mcp__serena__insert_before_symbol, mcp__serena__list_dir, mcp__serena__list_memories, mcp__serena__onboarding, mcp__serena__read_memory, mcp__serena__replace_symbol_body, mcp__serena__restart_language_server, mcp__serena__search_for_pattern, mcp__serena__switch_modes, mcp__serena__think_about_collected_information, mcp__serena__think_about_task_adherence, mcp__serena__think_about_whether_you_are_done, mcp__serena__write_memory, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
-description: Token-efficient Serena MCP command for structured app development and problem-solving
+description: 構造化されたアプリ開発と問題解決のためのトークン効率的なSerena MCPコマンド
 ---
 
 ※ref: https://zenn.dev/sc30gsw/articles/ff81891959aaef
 
-## Quick Reference
+## クイックリファレンス
 
 ```bash
-/serena <problem> [options]           # Basic usage
-/serena debug "memory leak in prod"   # Debug pattern (5-8 thoughts)
-/serena design "auth system"          # Design pattern (8-12 thoughts)
-/serena review "optimize this code"   # Review pattern (4-7 thoughts)
-/serena implement "add feature X"     # Implementation (6-10 thoughts)
+/serena <問題> [オプション]           # 基本的な使用方法
+/serena debug "本番でメモリリーク"   # デバッグパターン (5-8ステップ)
+/serena design "認証システム"          # 設計パターン (8-12ステップ)
+/serena review "このコードを最適化"   # レビューパターン (4-7ステップ)
+/serena implement "機能Xを追加"     # 実装 (6-10ステップ)
 ```
 
-## Options
+## オプション
 
-| Option | Description                      | Usage                               | Use Case                         |
+| オプション | 説明                      | 使用方法                               | 使用ケース                         |
 | ------ | -------------------------------- | ----------------------------------- | -------------------------------- |
-| `-q`   | Quick mode (3-5 thoughts/steps)  | `/serena "fix button" -q`           | Simple bugs, minor features      |
-| `-d`   | Deep mode (10-15 thoughts/steps) | `/serena "architecture design" -d`  | Complex systems, major decisions |
-| `-c`   | Code-focused analysis            | `/serena "optimize performance" -c` | Code review, refactoring         |
-| `-s`   | Step-by-step implementation      | `/serena "build dashboard" -s`      | Full feature development         |
-| `-v`   | Verbose output (show process)    | `/serena "debug issue" -v`          | Learning, understanding process  |
-| `-r`   | Include research phase           | `/serena "choose framework" -r`     | Technology decisions             |
-| `-t`   | Create implementation todos      | `/serena "new feature" -t`          | Project management               |
+| `-q`   | クイックモード (3-5ステップ)  | `/serena "ボタン修正" -q`           | 簡単なバグ、小さな機能      |
+| `-d`   | ディープモード (10-15ステップ) | `/serena "アーキテクチャ設計" -d`  | 複雑システム、重要な決定 |
+| `-c`   | コード焦点分析            | `/serena "パフォーマンス最適化" -c` | コードレビュー、リファクタリング         |
+| `-s`   | ステップバイステップ実装      | `/serena "ダッシュボード構築" -s`      | フル機能開発         |
+| `-v`   | 詳細出力 (プロセス表示)    | `/serena "問題デバッグ" -v`          | 学習、プロセス理解  |
+| `-r`   | リサーチフェーズを含む           | `/serena "フレームワーク選択" -r`     | 技術決定             |
+| `-t`   | 実装TODOを作成      | `/serena "新機能" -t`          | プロジェクト管理               |
 
 ## Usage Patterns
 

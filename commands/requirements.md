@@ -1,32 +1,32 @@
 ---
 allowed-tools: TodoWrite, TodoRead, Read, Write, MultiEdit, Bash(mkdir:*), mcp__serena__find_file, mcp__serena__find_symbol, mcp__serena__list_memories, mcp__serena__search_for_pattern
-description: Create requirements specification for the given task (Stage 1 of Spec-Driven Development)
+description: 指定されたタスクの要件仕様を作成（仕様駆動開発のステージ1）
 ---
 
-## Context
+## コンテキスト
 
-- Task description: $ARGUMENTS
+- タスク説明: $ARGUMENTS
 
-## Your task
+## あなたのタスク
 
-### 1. Create directory
+### 1. ディレクトリの作成
 
-- Create `.tmp` directory if it doesn't exist
+- 存在しない場合は`.tmp`ディレクトリを作成
 
-### 2. Analyze the user's request
+### 2. ユーザーのリクエストを分析
 
-**IMPORTANT: When investigating existing files or code, you MUST use serena. Using serena reduces token consumption by 60-80% and efficiently retrieves necessary information through semantic search capabilities.**
+**重要: 既存のファイルやコードを調査する際は、serenaを使用する必要があります。serenaを使用することで、トークン消費量を60-80%削減し、セマンティック検索機能を通じて必要な情報を効率的に取得できます。**
 
-Carefully analyze the provided task description and extract:
+提供されたタスク説明を注意深く分析し、以下を抽出:
 
-- The core problem to be solved
-- Implicit requirements not explicitly stated
-- Potential edge cases and constraints
-- Success criteria
+- 解決すべきコア問題
+- 明示的に述べられていない暗黙の要件
+- 潜在的なエッジケースと制約
+- 成功基準
 
-### 3. Create Requirements Document
+### 3. 要件定義書の作成
 
-Create `.tmp/requirements.md` with the following sections:
+以下のセクションで`.tmp/requirements.md`を作成:
 
 ```markdown
 # 要件定義書 - [タスク名]
@@ -97,23 +97,23 @@ Create `.tmp/requirements.md` with the following sections:
 - [設計フェーズで詳細化すべき事項]
 ```
 
-### 4. Create TODO entry
+### 4. TODOエントリの作成
 
-Use TodoWrite to add "要件定義の完了とレビュー" as a task
+TodoWriteを使用して「要件定義の完了とレビュー」をタスクとして追加
 
-### 5. Present to user
+### 5. ユーザーへの提示
 
-Show the created requirements document and ask for:
+作成した要件定義書を表示し、以下を求める:
 
-- Confirmation of understanding
-- Any missing requirements
-- Approval to proceed to design phase
+- 理解の確認
+- 不足している要件の有無
+- 設計フェーズへの進行承認
 
-## Important Notes
+## 重要注意事項
 
-- Be thorough in identifying implicit requirements
-- Consider both current needs and future extensibility
-- Use clear, unambiguous language
-- Include measurable success criteria
+- 暗黙の要件の特定に徹底する
+- 現在のニーズと将来の拡張性の両方を考慮
+- 明確で曖昧さのない言葉を使用
+- 測定可能な成功基準を含める
 
 think hard

@@ -1,28 +1,28 @@
 ---
 allowed-tools: TodoWrite, TodoRead, Read, Write, MultiEdit, mcp__serena__find_file, mcp__serena__find_symbol, mcp__serena__list_memories, mcp__serena__search_for_pattern
-description: Create detailed design specification based on requirements (Stage 2 of Spec-Driven Development)
+description: 要件に基づいた詳細設計仕様の作成（仕様駆動開発のステージ2）
 ---
 
-## Context
+## コンテキスト
 
-- Requirements document: @.tmp/requirements.md
+- 要件定義書: @.tmp/requirements.md
 
-## Your task
+## あなたのタスク
 
-### 1. Verify prerequisites
+### 1. 前提条件の確認
 
-- Check that `.tmp/requirements.md` exists
-- If not, inform user to run `/requirements` first
+- `.tmp/requirements.md`が存在することを確認
+- 存在しない場合は、ユーザーに最初に`/requirements`を実行するよう通知
 
-### 2. Analyze requirements
+### 2. 要件の分析
 
-**IMPORTANT: When investigating existing files or code, you MUST use serena. Using serena reduces token consumption by 60-80% and efficiently retrieves necessary information through semantic search capabilities.**
+**重要: 既存のファイルやコードを調査する際は、serenaを使用する必要があります。serenaを使用することで、トークン消費量を60-80%削減し、セマンティック検索機能を通じて必要な情報を効率的に取得できます。**
 
-Read and understand the requirements document thoroughly
+要件定義書を十分に読み、理解してください
 
-### 3. Create Design Document
+### 3. 設計書の作成
 
-Create `.tmp/design.md` with the following sections:
+以下のセクションで`.tmp/design.md`を作成:
 
 ````markdown
 # 詳細設計書 - [タスク名]
@@ -144,20 +144,20 @@ Create `.tmp/design.md` with the following sections:
 
 ```
 
-### 4. Update TODO
-Use TodoWrite to add "詳細設計の完了とレビュー" as a task
+### 4. TODOの更新
+TodoWriteを使用して「詳細設計の完了とレビュー」をタスクとして追加
 
-### 5. Present to user
-Show the created design document and ask for:
-- Technical feedback
-- Architecture approval
-- Permission to proceed to task breakdown
+### 5. ユーザーへの提示
+作成した設計書を表示し、以下を求める:
+- 技術的フィードバック
+- アーキテクチャの承認
+- タスク分割への進行許可
 
-## Important Notes
-- Design should be implementable and testable
-- Consider maintainability and extensibility
-- Include concrete interface definitions where possible
-- Address all requirements from the requirements document
+## 重要注意事項
+- 設計は実装可能でテスト可能であるべき
+- 保守性と拡張性を考慮
+- 可能な限り具体的なインターフェース定義を含める
+- 要件定義書のすべての要件に対応
 ```
 
 think hard

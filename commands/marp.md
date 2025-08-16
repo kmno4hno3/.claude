@@ -1,30 +1,30 @@
 ---
 allowed-tools: Read, Write, Bash(marp:*, rm:*)
-description: Simplify markdown and convert to PDF with Marp
+description: マークダウンを簡略化し、MarpでPDFに変換
 ---
 
-## Context
+## コンテキスト
 
-- Input file: $ARGUMENTS
-- Guidelines: @~/.claude/templates/slide-guidelines.md
-- Template: @~/.claude/templates/design-template.md
+- 入力ファイル: $ARGUMENTS
+- ガイドライン: @~/.claude/templates/slide-guidelines.md
+- テンプレート: @~/.claude/templates/design-template.md
 
-## Your task
+## あなたのタスク
 
-1. Read the input markdown file
-2. Read the slide guidelines
-3. Simplify the markdown content according to the guidelines:
+1. 入力マークダウンファイルを読み取り
+2. スライドガイドラインを読み取り
+3. ガイドラインに従ってマークダウンコンテンツを簡略化:
 
-   - Shorten titles to max 30 full-width characters
-   - Simplify bullet points to 1-2 lines each
-   - Remove redundant phrases
-   - Keep max 5-7 bullet points per slide
-   - Break long paragraphs
+   - タイトルを最大30全角文字に短縮
+   - 箇条書きを、1-2行に簡略化
+   - 冗長なフレーズを除去
+   - スライドあたり最大5-7個の箇条書きを維持
+   - 長い段落を分割
 
-4. Read the design template
-5. Apply the template to the simplified content
-6. Save to a temporary file
-7. Convert to PDF using Marp CLI
-8. Clean up the temporary file
+4. デザインテンプレートを読み取り
+5. 簡略化されたコンテンツにテンプレートを適用
+6. 一時ファイルに保存
+7. Marp CLIを使用してPDFに変換
+8. 一時ファイルをクリーンアップ
 
-The output PDF should be in the same directory as the input file.
+出力PDFは入力ファイルと同じディレクトリに置かれるべきです。

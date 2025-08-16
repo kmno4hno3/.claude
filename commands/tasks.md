@@ -112,13 +112,13 @@ Create `.tmp/tasks.md` with the following structure:
 - 不明点は実装前に確認する
 ```
 
-### 4. Register tasks in TodoWrite
+### 4. TodoWriteでタスクを登録
 
-Extract main tasks (Phase level or important tasks) and register them using TodoWrite tool with appropriate priorities
+メインタスク（フェーズレベルまたは重要なタスク）を抽出し、適切な優先度でTodoWriteツールを使用して登録
 
-### 5. Create implementation guide
+### 5. 実装ガイドの作成
 
-Add a section at the end of tasks.md:
+tasks.mdの末尾にセクションを追加:
 
 ```markdown
 ## 実装開始ガイド
@@ -129,19 +129,19 @@ Add a section at the end of tasks.md:
 4. 問題発生時は速やかに報告してください
 ```
 
-### 6. Present to user
+### 6. ユーザーへの提示
 
-Show the task breakdown and:
+タスクの分割を表示し、以下を実行:
 
-- Explain the implementation order
-- Highlight any critical paths
-- Ask for approval to begin implementation
+- 実装順序の説明
+- クリティカルパスの強調
+- 実装開始の承認を求める
 
-## Important Notes
+## 重要注意事項
 
-- Tasks should be commit-sized (completable in 1-4 hours)
-- Include clear completion criteria for each task
-- Consider parallel execution opportunities
-- Include testing tasks throughout, not just at the end
+- タスクはコミットサイズ（1-4時間で完了可能）であるべき
+- 各タスクに明確な完了基準を含める
+- 並列実行の機会を考慮
+- 最後だけでなく、全体を通してテストタスクを含める
 
 think hard

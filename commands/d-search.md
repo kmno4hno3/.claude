@@ -1,39 +1,39 @@
 ---
 allowed-tools: Bash(gemini:*)
-description: "Use the Gemini CLI to perform deep web searches and generate detailed reporting."
+description: "Gemini CLIを使用して深度のあるウェブ検索を実行し、詳細なレポートを生成します"
 ---
 
-## Gemini Deep Search
+## Gemini ディープサーチ
 
-`gemini` is google gemini cli. You can use it for web search.
+`gemini` は Google Gemini CLI です。ウェブ検索に使用できます。
 
-### Your Tasks (MUST follow this workflow):
+### あなたのタスク（このワークフローに従う必要があります）:
 
-1. Search Phase: Run multiple searches in parallel using gemini CLI.
+1. 検索フェーズ: Gemini CLIを使用して複数の検索を並列実行
 
-- Use the `google_web_search` tool in the Gemini CLI
-- You will receive a command like `>/search [arguments]`.
-  - Please use the google_web_search tool in the Gemini CLI to search for the arguments you received as follows.
-  - !`gemini -m gemini-2.5-flash -p "google_web_search: [arguments]'`
-- Search for 2-3 keywords individually in parallel (not combined)
-- Extract URLs only from search results (do not process HTML content)
-- The model used is "gemini-2.5-flash" and no other models
+- Gemini CLIの`google_web_search`ツールを使用
+- `>/search [引数]`のようなコマンドを受け取ります
+  - 受け取った引数に対して、以下のようにGemini CLIのgoogle_web_searchツールを使用してください
+  - !`gemini -m gemini-2.5-flash -p "google_web_search: [引数]'`
+- 2-3個のキーワードを個別に並列検索（組み合わせではなく）
+- 検索結果からURLのみを抽出（HTMLコンテンツは処理しない）
+- 使用モデルは"gemini-2.5-flash"のみ
 
-1. Content Extraction Phase: Use readability MCP to extract clean content `mcp__readability__read_url_content_as_markdown`
+2. コンテンツ抽出フェーズ: readability MCPを使用してクリーンなコンテンツを抽出 `mcp__readability__read_url_content_as_markdown`
 
-- Apply this to the most relevant URLs from step 1
-- This removes HTML tags and extracts only the main content
-- IMPORTANT: Do NOT summarize or process the search results before using this tool (to minimize token consumption)
+- ステップ1で得た最も関連性の高いURLに適用
+- HTMLタグを除去し、メインコンテンツのみを抽出
+- 重要: このツールを使用する前に検索結果を要約または処理しない（トークン消費を最小化するため）
 
-2. Report Generation Phase: Combine the extracted markdown content into a comprehensive report
+3. レポート生成フェーズ: 抽出されたマークダウンコンテンツを包括的なレポートに統合
 
-- Synthesize information from multiple sources
-- Create a structured markdown report
+- 複数のソースからの情報を統合
+- 構造化されたマークダウンレポートを作成
 
-### Critical Rules
+### 重要なルール
 
-- Execute ALL steps within the Task Tool to minimize Claude token consumption
-- Do NOT use the built-in `Web Search` tool
-- Do NOT process or summarize raw HTML search results directly
-- Always extract content using readability BEFORE processing
-- Include the final detailed report in a markdown file
+- Claudeのトークン消費を最小化するため、すべてのステップをTaskツール内で実行
+- 組み込みの`Web Search`ツールは使用しない
+- 生のHTML検索結果を直接処理または要約しない
+- 処理前に常にreadabilityを使用してコンテンツを抽出
+- 最終的な詳細レポートをマークダウンファイルに含める

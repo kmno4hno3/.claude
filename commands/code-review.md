@@ -1,43 +1,43 @@
 ---
 allowed-tools: TodoWrite, TodoRead, Read, Write, MultiEdit, Bash(mkdir:*), Bash(gh pr view:*), Bash(gh pr diff:*), mcp__serena__find_file, mcp__serena__find_symbol, mcp__serena__list_memories, mcp__serena__search_for_pattern
-description: Perform a thorough code review of pull requests following established guidelines, focusing on code quality, best practices, and maintainability while providing constructive feedback
+description: 確立されたガイドラインに従ってプルリクエストの詳細なコードレビューを実行し、コード品質、ベストプラクティス、保守性に焦点を当てて建設的なフィードバックを提供します
 ---
 
-## Code Review Rules
+## コードレビュールール
 
-Review the pull request specified by the PR number provided in the command arguments.
+コマンド引数で提供されたPR番号で指定されたプルリクエストをレビューします。
 
-Usage: `/code-review <PR_NUMBER>`
-Example: `/code-review 001`
+使用方法: `/code-review <PR_NUMBER>`
+例: `/code-review 001`
 
-The PR number will be available as `$ARGUMENTS`.
+PR番号は `$ARGUMENTS` として利用できます。
 
-Review process:
+レビュープロセス:
 
-**IMPORTANT: When investigating existing files or code, you MUST use serena. Using serena reduces token consumption by 60-80% and efficiently retrieves necessary information through semantic search capabilities.**
+**重要: 既存のファイルやコードを調査する際は、serenaを使用する必要があります。serenaを使用することで、トークン消費量を60-80%削減し、セマンティック検索機能を通じて必要な情報を効率的に取得できます。**
 
-1. **Get PR information:** Use the github cli ( `gh pr view $arguments`) to get the pr details.
-2. **Explore changes:** Use "gh pr diff $arguments" to check for code changes.
-3. **Do code review:** Check the details of the PR and perform a code review.
-4. **Run review:** Perform code reviews according to `Important Guidelines for Write a Comment`".
-5. **Report review results** Instead of using something like create pull_request_review, save the review results in `.tmp`. Add a comment to a line that has improvements or concerns. If revisions are clear, use the suggestions proactively.
+1. **PR情報の取得:** GitHub CLI（`gh pr view $arguments`）を使用してPRの詳細を取得
+2. **変更の調査:** "gh pr diff $arguments"を使用してコード変更を確認
+3. **コードレビューの実行:** PRの詳細を確認し、コードレビューを実行
+4. **レビューの実施:** 「コメント記述の重要ガイドライン」に従ってコードレビューを実行
+5. **レビュー結果の報告:** pull_request_reviewのようなものを使用する代わりに、レビュー結果を`.tmp`に保存。改善点や懸念事項がある行にコメントを追加。修正が明確な場合は、積極的に提案を使用
 
-**Important Guidelines for Writing Comments**
+**コメント記述の重要ガイドライン**
 
-- **Inline Comment Structure:**
+- **インラインコメントの構造:**
 
-  - **Leave with conclusion:** Use the one-line summary of the main point to write code differences, number of lines, filenames and review content.
-  - **Reasoning and suggestions:** After the conclusion, provide detailed explanation of your reasoning, background, and specific suggestions.
-  - **Focus on issues:** Inline comments should focus on specific improvements like bug fixes, potential bugs, or readability issues.
+  - **結論で締める:** 要点の一行要約を使用して、コードの違い、行数、ファイル名、レビュー内容を記述
+  - **理由と提案:** 結論の後に、理由、背景、具体的な提案の詳細な説明を提供
+  - **問題に焦点:** インラインコメントは、バグ修正、潜在的なバグ、可読性の問題など、具体的な改善点に焦点を当てる
 
-- **Regarding Positive Feedback:**
+- **ポジティブフィードバックについて:**
 
-  - **Be selective inline:** Only mention exceptional design choices or innovative implementations that other developers can learn from.
-  - **Summarize positives:** Consolidate overall positive aspects and general impressions in the summary comment when submitting the review.
+  - **インラインで選択的に:** 他の開発者が学べる例外的な設計選択や革新的な実装のみを言及
+  - **ポジティブな点をまとめる:** レビュー提出時に、全体的なポジティブな側面と一般的な印象をサマリーコメントにまとめる
 
-- **Review Format**
-  - **Write a review in Markdown**: Save the review results to `.tmp`.
-  - **Write a review in Japanese**: Please write code reviews in the format below.
+- **レビュー形式**
+  - **マークダウンでレビューを記述:** レビュー結果を`.tmp`に保存
+  - **日本語でレビューを記述:** 以下の形式でコードレビューを記述してください
 
 ---
 
@@ -59,29 +59,29 @@ Review process:
 
 ---
 
-**Review Perspectives**
+**レビューの観点**
 
-Focus on the following aspects during review:
+レビュー時は以下の側面に焦点を当てる:
 
-- Compliance with CLAUDE.md guidelines
-- Adherence to code quality and best practices
-  - Separate responsibilities properly
-  - Maximize code reusability
-  - Avoid unnecessary code
-  - Return all API data unless performance impact is significant
-  - Verify object equality in tests
-  - Apply consistent styling throughout the app
-  - Maintain variable naming consistency
-  - Display frontend errors in Japanese, avoid raw responses
-  - Consider appropriate processing location (backend vs frontend)
-- Check for bugs or security risks
-- Identify performance concerns
-- Ensure maintainability and readability
-- Validate design and architecture decisions
+- CLAUDE.mdガイドラインへの準拠
+- コード品質とベストプラクティスの遵守
+  - 責任の適切な分離
+  - コードの再利用性の最大化
+  - 不要なコードの回避
+  - パフォーマンスへの影響が大きくない限り、すべてのAPIデータを返す
+  - テストでのオブジェクト等価性の検証
+  - アプリ全体での一貫したスタイリングの適用
+  - 変数命名の一貫性の維持
+  - フロントエンドエラーの日本語表示、生レスポンスの回避
+  - 適切な処理場所の検討（バックエンド vs フロントエンド）
+- バグやセキュリティリスクのチェック
+- パフォーマンスの懸念の特定
+- 保守性と可読性の確保
+- 設計とアーキテクチャの決定の検証
 
-**Additional Notes**
+**追加注意事項**
 
-- Provide feedback in Japanese.
-- Give specific and actionable feedback.
+- 日本語でフィードバックを提供
+- 具体的で実行可能なフィードバックを提供
 
 think super hard

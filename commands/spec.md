@@ -1,54 +1,54 @@
 ---
 allowed-tools: TodoWrite, TodoRead, Read, Write, MultiEdit, Bash(mkdir:*)
-description: Start Specification-Driven Development workflow for the given task
+description: 指定されたタスクの仕様駆動開発ワークフローを開始
 ---
 
-## Context
+## コンテキスト
 
-- Task requirements: $ARGUMENTS
+- タスク要件: $ARGUMENTS
 
-## Your task
+## あなたのタスク
 
-Execute the complete Specification-Driven Development workflow:
+完全な仕様駆動開発ワークフローを実行:
 
-### 1. Setup
+### 1. セットアップ
 
-- Create `.tmp` directory if it doesn't exist
-- Create a new feature branch based on the task
+- 存在しない場合は`.tmp`ディレクトリを作成
+- タスクに基づいて新しい機能ブランチを作成
 
-### 2. Stage 1: Requirements
+### 2. ステージ1: 要件
 
-Execute `/requirements` command to create detailed requirements specification.
+`/requirements`コマンドを実行して詳細な要件仕様を作成。
 
-**Present requirements to user for approval before proceeding**
+**進行前にユーザーに要件を提示し、承認を取る**
 
-### 3. Stage 2: Design
+### 3. ステージ2: 設計
 
-Execute `/design` command to create technical design based on requirements.
+`/design`コマンドを実行して要件に基づいた技術設計を作成。
 
-**Present design to user for approval before proceeding**
+**進行前にユーザーに設計を提示し、承認を取る**
 
-### 4. Stage 3: Test Design
+### 4. ステージ3: テスト設計
 
-Execute `/test-design` command to create comprehensive test specification based on design.
+`/test-design`コマンドを実行して設計に基づいた包括的なテスト仕様を作成。
 
-**Present test design to user for approval before proceeding**
+**進行前にユーザーにテスト設計を提示し、承認を取る**
 
-### 5. Stage 4: Task List
+### 5. ステージ4: タスクリスト
 
-Execute `/tasks` command to break down design and test cases into implementable tasks.
+`/tasks`コマンドを実行して設計とテストケースを実装可能なタスクに分割。
 
-**Present task list to user for approval before proceeding**
+**進行前にユーザーにタスクリストを提示し、承認を取る**
 
-### 6. Report completion
+### 6. 完了報告
 
-Summarize what was created and inform user that they can now proceed with implementation using the generated specification documents.
+作成されたものを要約し、生成された仕様書を使用して実装に進むことができることをユーザーに通知。
 
-## Important Notes
+## 重要注意事項
 
-- Each stage output should be detailed and actionable
-- Wait for user confirmation between stages
-- Focus on clarity and completeness in documentation
-- Consider edge cases and error scenarios in each stage
+- 各ステージの出力は詳細で実行可能であるべき
+- ステージ間でユーザーの確認を待つ
+- 文書の明確性と完全性に重点を置く
+- 各ステージでエッジケースとエラーシナリオを考慮
 
 think hard

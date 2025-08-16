@@ -1,40 +1,40 @@
 ---
 allowed-tools: Bash(textlint:*), MultiEdit, Read, TodoWrite
-description: Execute textlint on specified files, apply automatic fixes, manually fix remaining errors, and repeat until all errors are resolved
+description: 指定されたファイルにtextlintを実行し、自動修正と手動修正を適用し、すべてのエラーが解決されるまで繰り返します
 ---
 
-## Textlint Review
+## Textlint レビュー
 
-Execute textlint on the specified file, apply automatic and manual fixes, and repeat until all errors are resolved.
+指定されたファイルにtextlintを実行し、自動および手動修正を適用し、すべてのエラーが解決されるまで繰り返します。
 
-Usage: `/textlint <FILE_PATH>`
-Example: `/textlint README.md`
+使用方法: `/textlint <FILE_PATH>`
+例: `/textlint README.md`
 
-The file path will be available as `$ARGUMENTS`.
+ファイルパスは`$ARGUMENTS`として利用できます。
 
-Execution process:
+実行プロセス:
 
-1. **Initial lint execution**: Run `textlint -c ~/.claude/.textlintrc.json <FILE_PATH>` to detect issues
-2. **Apply automatic fixes**: Run `textlint -c ~/.claude/.textlintrc.json --fix <FILE_PATH>` to fix auto-fixable issues
-3. **Execute manual fixes**: Apply manual fixes for remaining issues:
-   - Fix sentence-ending punctuation (change colons to periods)
-   - Improve mechanical expressions (`**Item**: Description` → `**Item** (Description)`)
-   - Clarify ambiguous expressions ("appropriate" → "specified", etc.)
-   - Remove exclamation marks ("!" → ".")
-   - Change bold attention prefixes to natural expressions
-4. **Iterate**: Repeat until no errors remain or no improvement is observed
+1. **初回lint実行**: `textlint -c ~/.claude/.textlintrc.json <FILE_PATH>`を実行して問題を検出
+2. **自動修正の適用**: `textlint -c ~/.claude/.textlintrc.json --fix <FILE_PATH>`を実行して自動修正可能な問題を修正
+3. **手動修正の実行**: 残った問題に対して手動修正を適用:
+   - 文末句読点の修正（コロンをピリオドに変更）
+   - 機械的表現の改善（`**項目**: 説明` → `**項目**（説明）`）
+   - 曖昧な表現の明確化（「適切な」→「指定された」など）
+   - 感嘆符の除去（「！」→「。」）
+   - 太字の注意プレフィックスを自然な表現に変更
+4. **反復**: エラーがなくなるか、改善が観察されなくなるまで繰り返し
 
-**Processing details:**
+**処理詳細:**
 
-- Use TodoWrite to track progress
-- Verify results at each step and apply fixes incrementally
-- Confirm file content before and after fixes
-- Monitor error count changes to prevent infinite loops
+- 進捗追跡にTodoWriteを使用
+- 各ステップで結果を検証し、漸進的に修正を適用
+- 修正前後のファイル内容を確認
+- 無限ループを防ぐためにエラー数の変化を監視
 
-**Important notes:**
+**重要注意事項:**
 
-- Original files will be edited directly
-- Large files may take time to process
-- textlint must be installed and configured with config file at ~/.claude/.textlintrc.json
+- 元のファイルが直接編集されます
+- 大きなファイルは処理に時間がかかる場合があります
+- textlintがインストールされ、~/.claude/.textlintrc.jsonに設定ファイルが構成されている必要があります
 
 think hard

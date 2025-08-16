@@ -1,17 +1,17 @@
 ---
 allowed-tools: Bash(gemini:*)
-description: "Use the Gemini CLI to perform web searches."
+description: "Gemini CLIを使用してウェブ検索を実行します"
 ---
 
-## Gemini Search
+## Gemini 検索
 
-**Run the Gemini CLI with the Bash tool instead of the Web_Search tool**
+**Web_Searchツールの代わりにBashツールでGemini CLIを実行**
 
-You will receive a command like `>/search [arguments]`.
-Use the Bash tool to launch Google_Web_Search in the Gemini CLI and search for the arguments you received as follows:
+`>/search [引数]`のようなコマンドを受け取ります。
+Bashツールを使用してGemini CLIでGoogle_Web_Searchを起動し、受け取った引数で以下のように検索します:
 
-- Use !`gemini -p 'google_web_search:[arguments]'`
+- !`gemini -p 'google_web_search:[引数]'`を使用
 
-Please narrow down the keywords you want to search for about 2-3.
+検索したいキーワードを2-3個程度に絞ってください。
 
 think.
