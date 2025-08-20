@@ -33,7 +33,7 @@ description: gh-sub-issue拡張を使って正式なsub-issueを作成
 ### 4. 正式なsub-issueの作成
 
 - 親issueの内容を分析してsub-issueのタイトルと本文を生成
-- `gh sub-issue create $ARGUMENTS --title "具体的なタスクタイトル" --body "詳細な実装内容..."`でsub-issueを作成
+- `gh sub-issue create --parent $ARGUMENTS --title "具体的なタスクタイトル" --body "詳細な実装内容..."`でsub-issueを作成
 - 必要に応じて複数のsub-issueを作成
 - 各sub-issueに適切なラベルやアサイニーを設定
 
