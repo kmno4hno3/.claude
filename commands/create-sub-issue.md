@@ -28,6 +28,7 @@ description: gh-sub-issue拡張を使って正式なsub-issueを作成
 
 - `gh issue view $ARGUMENTS --json title,body,labels,assignees`で親issueの詳細を取得
 - issueのタイトル、本文、ラベル、アサイニーを解析
+- プロジェクトに .github/ISSUE_TEMPLATE/sub-issue.md があれば、それを使う
 - 親issueの内容から適切なsub-issueを設計
 
 ### 4. 正式なsub-issueの作成
